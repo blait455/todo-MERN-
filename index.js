@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 //connect to the database
-mongoose.connect(process.env.DB, { useNewUrlParser: true })
+mongoose.connect('mongodb+srv://mcjovial:19971104@todo.s3yuh.mongodb.net/todo?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log(`Database connected successfully`))
   .catch(err => console.log(err));
 
